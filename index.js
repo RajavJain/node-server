@@ -1,8 +1,8 @@
 const http =require("http");//ye module connection buildup karne mai kaam aaegya
 const fs=require("fs");//ye file read kr lega
 
-const PORT=2000;//maan liya ki ye ek constant hai (for Standard purpose)
-const hostname= "localhost";
+const PORT=process.env.PORT;//maan liya ki ye ek constant hai (for Standard purpose)
+// const hostname= "localhost";
 const home=fs.readFileSync("./index.html", "utf-8")
 
 const server=http.createServer((req,res) => {  // isme server create ho gya hai agar iske parameter bhool jaao to refer node website
@@ -25,6 +25,6 @@ const server=http.createServer((req,res) => {  // isme server create ho gya hai 
     // res.end("<h1>Hellow World </h1>");
 });
 
-server.listen(PORT, hostname,()=>{  // it will listen the port on localhost
-    console.log(`Server hosted on ${hostname} and on port no. ${PORT}` );
+server.listen(PORT,()=>{  // it will listen the port on localhost
+    console.log(`Server hosted ` );
 })
