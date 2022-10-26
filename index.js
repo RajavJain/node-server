@@ -2,7 +2,7 @@ const http =require("http");//ye module connection buildup karne mai kaam aaegya
 const fs=require("fs");//ye file read kr lega
 
 const PORT=2000;//maan liya ki ye ek constant hai (for Standard purpose) but agar hame deploy krna hoga then env.local.storage ka istmaal krna hoga kyuki jaroori nhi hai ki vo port khali ho server side pr...
-const hostname= "localhost";
+const hostname= "localhost";//isko set kr diya hai same as port no. 
 const home=fs.readFileSync("./index.html", "utf-8")
 
 const server=http.createServer((req,res) => {  // isme server create ho gya hai agar iske parameter bhool jaao to refer node website
