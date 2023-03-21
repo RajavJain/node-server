@@ -1,8 +1,9 @@
 const http =require("http");//ye module connection buildup karne mai kaam aaegya
 const fs=require("fs");//ye file read kr lega
 
-const PORT=process.env.PORT;//maan liya ki ye ek constant hai (for Standard purpose)
+// const PORT=process.env.PORT;//maan liya ki ye ek constant hai (for Standard purpose) Just for deploying on Netlify
 // const hostname= "localhost";
+const PORT = 2000;
 const home=fs.readFileSync("./index.html", "utf-8")
 
 const server=http.createServer((req,res) => {  // isme server create ho gya hai agar iske parameter bhool jaao to refer node website
